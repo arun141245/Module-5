@@ -1,4 +1,4 @@
-# Exp.No:23  
+# Exp.No:5e  
 ## Multiple Inheritance
 
 ---
@@ -32,14 +32,36 @@ To write a Python program to get the name, attendance, and ID of a student and c
 ### PROGRAM
 
 ```
-
+class student:
+    def info(self,n,i):
+        self.n=n
+        self.i=i
+        print(n)
+        print(i)
+class attendance:
+    def atten(self,a):
+        self.a=a
+class Eligible(student,attendance):
+    def check(self):
+        if self.a>75:
+            print("Eligible for Exam")
+        else:
+            print("Not Eligible for Exam")
+n=input()
+i=int(input())
+a=int(input())
+g=Eligible()
+g.info(n,i)
+g.atten(a)
+g.check()
 ```
 
 ### OUTPUT
+<img width="1187" height="325" alt="image" src="https://github.com/user-attachments/assets/bb2d7dc2-84ed-4cc5-8578-99d2c1f7ca0c" />
 
 
 ### RESULT
-
+Therefore, the output is the example to write a Python program to get the name, attendance, and ID of a student and check if they are eligible for the next module using multiple inheritance. If attendance > 80, the student is eligible; otherwise, not eligible.
 
 
 
